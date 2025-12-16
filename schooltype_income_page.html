@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Income and School Type</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light"><a
+            class="navbar-brand" href="./NEW_index.html">Who Will Succeed?</a><button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbar-body" aria-controls="navbar-body" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbar-body">
+            <ul class="navbar-nav mr-auto"></ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="./NEW_drugs_and_crime_page.html">Drugs and Crime</a></li>
+                <li class="nav-item"><a class="nav-link" href="./parents_education_page.html">Parents Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="./schooltype_income_page.html">Income and School Type</a></li>
+                <li class="nav-item"><a class="nav-link" href="./our_findings_page.html">Our Findings</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <div class="container" id="bsr-wrapper">
+        <div class='my-5'></div>
+        <h1>School and Household environments: How do School Type and Income Effect the Test Scores of Children?</h1>
+        <p>This section examines how different school environments and economic factors may intersect with student academic performance. Using box plots and parallel coordinates, the visualizations compare test score patterns across school types—public, charter, and private— and then incorporating indicators such as household income, participation in free or reduced lunch programs, and enrollment in test preparation courses. These views allow for side-by-side comparisons of score distributions across different educational settings. The goal of this page is to explore how school type and access to resources may collectively shape academic experiences.</p>
+        <div class='my-5'></div>
+        <hr>
+        <h2>Private, Charter, or Public... Does it make a Difference?</h2>
+        <embed src="./avgscore_schooltype.html"
+          type="text/html" height="700" width="1000" />
+        <p>The box plot above gives us some striking findings!</p>
+        <p>Contrary to what most would assume, from our pool of data, the private school children are shown to have the lowest median tests scores by almost 10 points, with an almost identical higher fence.</p>
+        <p>Allow this seems to be quite revealing data, we might find it to be qualified by our research on income effects below.</p>
+        <div class='py-3 my-4'></div>
+        <hr>
+        <h2>Show me the Money!</h2>
+        <p>First, let's examine the data on Free and Reduced Lunch.</p>
+        <p>Free and Reduced lunch indicates a low family household income, which probably correlates to the children attentding public schools. In the box plot below, you can see the difference between average test scores of a student receiving or not receiving free and reduced lunch.</p>
+        <embed src="./testscores_freelunch.html"
+          type="text/html" height="700" width="1000" />
+        <p>Next, let's take a look at how test prep might affect test scores.</p>
+        <p>The ability to take a test preparation course probably correlates to a higher household average income, which likely correlates to students attending private school. Below, the box plot illutstrates the difference in math and reading scores as well as their total. </p>
+        <embed src="./testprep_boxplot.html"
+          type="text/html" height="700" width="1000" />
+        <p>Lastly, let's look at average test scores versus direct average household GDP.</p>
+        <p>The parallel coordinates below both shed light on and obscure the previous data. In the middle range of GDP there is a suspected average output in test scores, but when you get to the extremes... things get wacky.</p>
+        <embed src="./gdp_vs_testscores.html"
+          type="text/html" height="700" width="1000" />
+       
+        <div class='py-3 my-4'></div>
+        <h3>At a glance...</h3>
+        <p>At first, private schooling seemed to show no improvement towards students' test scores.</p>
+        <p>Then upon closer inspection, it seemed that free and reduced lunch - public schools - and test prep courses - private schools - held direct and strong sway over test scores in the opposite direction as our original box plot. And lastly, our GDP per income parallel coordinates threw a wrench in all the data.</p>
+        <p>So what can you make of it? It seems that private schooling will offer stronger resources which make proven improvements in test scores, but students from lower GDP households might have an unmeasurable factor of grit and determination.</p>
+    <div class="my-5"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
